@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updated Patil Family Tree</title>
+    <style>
+        /* General Page Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Container to handle the massive width */
+        .tree-container {
+            width: 100%;
+            height: 100vh;
+            overflow: auto; /* Scrollbars */
+            text-align: center;
+            background: white;
+            padding-bottom: 50px;
+        }
+
+        /* -------------------------------------- */
+        /* TREE CSS LOGIC                         */
+        /* -------------------------------------- */
+        .tree {
+            display: inline-table;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+
+        .tree ul {
+            padding-top: 20px; 
+            position: relative;
+            transition: all 0.5s;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding-left: 0;
+        }
+
+        .tree li {
+            float: left; text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 5px 0 5px;
+            transition: all 0.5s;
+        }
+
+        /* Connecting Lines */
+        .tree li::before, .tree li::after{
+            content: '';
+            position: absolute; top: 0; right: 50%;
+            border-top: 1px solid #ccc;
+            width: 50%; height: 20px;
+        }
+        .tree li::after{
+            right: auto; left: 50%;
+            border-left: 1px solid #ccc;
+        }
+
+        /* Remove connectors for single/first/last children */
+        .tree li:only-child::after, .tree li:only-child::before {
+            display: none;
+        }
+        .tree li:only-child{ padding-top: 0;}
+        .tree li:first-child::before, .tree li:last-child::after{
+            border: 0 none;
+        }
+        
+        /* Vertical lines for first/last nodes */
+        .tree li:last-child::before{
+            border-right: 1px solid #ccc;
+            border-radius: 0 5px 0 0;
+        }
+        .tree li:first-child::after{
+            border-radius: 5px 0 0 0;
+        }
+
+        /* Downward connector from parents */
+        .tree ul ul::before{
+            content: '';
+            position: absolute; top: 0; left: 50%;
+            border-left: 1px solid #ccc;
+            width: 0; height: 20px;
+        }
+
+        /* -------------------------------------- */
+        /* THE NODE (BLUE BOX) STYLES             */
+        /* -------------------------------------- */
+        .tree li a {
+            background-color: #3b6dae;
+            color: #fff;
+            padding: 8px 10px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            border-radius: 2px;
+            white-space: nowrap;
+            min-width: 60px;
+        }
+
+        .tree li a:hover {
+            background: #5d8bc9;
+            border: 1px solid #94a0b4;
+            z-index: 20;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="tree-container">
+    <div class="tree">
+        <ul>
+            <li>
+                <a href="#">अमृत पाटील</a>
+                <ul>
+                    <li>
+                        <a href="#">देवबा पाटील</a>
+                        <ul>
+                            <li>
+                                <a href="#">रायाजी पाटील</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">देवाजी पाटील</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">शिवाजी पाटील</a>
+                                                
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">निंबाजी पाटील</a>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="#">धनाजी पाटील</a>
+                                                                <ul>
+                                                                    <li>
+                                                                        <a href="#">उखा पाटील</a>
+                                                                        <ul>
+                                                                            <li>
+                                                                                <a href="#">तोताराम पाटील</a>
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        <a href="#">मोतीराम पाटील</a>
+                                                                                        <ul>
+                                                                                            <li><a href="#">तुकाराम पाटील</a>
+                                                                                                <ul>
+                                                                                                    <li><a href="#">शंकर पाटील</a>
+                                                                                                        <ul>
+                                                                                                            <li><a href="#">सुरेश पाटील</a>
+                                                                                                                <ul>
+                                                                                                                    <li><a href="#">दीपक पाटील</a>
+                                                                                                                        <ul>
+                                                                                                                            <li><a href="#">अनिकेत पाटील</a></li>
+                                                                                                                            <li><a href="#">श्रीकांत पाटील</a></li>
+                                                                                                                        </ul>
+                                                                                                                    </li>
+                                                                                                                    <li><a href="#">संदीप पाटील</a>
+                                                                                                                        <ul>
+                                                                                                                            <li><a href="#">तेजस पाटील</a></li>
+                                                                                                                        </ul>
+                                                                                                                    </li>
+                                                                                                                </ul>
+                                                                                                            </li>
+                                                                                                            
+                                                                                                            <li><a href="#">रमेश पाटील</a>
+                                                                                                                <ul>
+                                                                                                                    <li><a href="#">दिनेश पाटील</a>
+                                                                                                                        <ul><li><a href="#">तन्मय पाटील</a></li></ul>
+                                                                                                                    </li>
+                                                                                                                    <li><a href="#">नितीन पाटील</a></li>
+                                                                                                                </ul>
+                                                                                                            </li>
+
+                                                                                                            <li><a href="#">विजय पाटील</a>
+                                                                                                                <ul>
+                                                                                                                    <li><a href="#">युवराज पाटील</a>
+                                                                                                                        <ul><li><a href="#">ध्रुव पाटील</a></li></ul>
+                                                                                                                    </li>
+                                                                                                                </ul>
+                                                                                                            </li>
+
+                                                                                                            <li><a href="#">किशोर पाटील</a>
+                                                                                                                <ul>
+                                                                                                                    <li><a href="#">राकेश पाटील</a></li>
+                                                                                                                </ul>
+                                                                                                            </li>
+                                                                                                        </ul>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                            <li><a href="#">रामभाऊ पाटील</a>
+                                                                                                <ul>
+                                                                                                    <li><a href="#">वसंता पाटील</a><ul><li><a href="#">अनंत पाटील</a></li></ul></li>
+                                                                                                    <li><a href="#">संजय पाटील</a><ul><li><a href="#">शैलेश पाटील</a><ul><li><a href="#">अर्णव पाटील</a></li></ul></li><li><a href="#">गोपाळ पाटील</a></li></ul></li>
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                            <li><a href="#">रघुनाथ पाटील</a>
+                                                                                                <ul>
+                                                                                                    <li><a href="#">वासुदेव पाटील</a><ul><li><a href="#">पवन पाटील</a></li></ul></li>
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                            <li><a href="#">गोपाळ पाटील</a></li>
+                                                                                        </ul>
+                                                                                    </li>
+
+                                                                                    <li>
+                                                                                        <a href="#">सखाराम पाटील</a>
+                                                                                        <ul>
+                                                                                            <li>
+                                                                                                <a href="#">कृष्णा पाटील</a>
+                                                                                                <ul>
+                                                                                                    <li><a href="#">विक्रम पाटील</a><ul><li><a href="#">रामा पाटील</a><ul><li><a href="#">अविनाश पाटील</a><ul><li><a href="#">अथर्व पाटील</a></li></ul></li></ul></li></ul></li>
+                                                                                                    
+                                                                                                    <li><a href="#">लक्ष्मण पाटील</a>
+                                                                                                        <ul>
+                                                                                                            <li><a href="#">दामू पाटील</a>
+                                                                                                                <ul>
+                                                                                                                    <li><a href="#">ज्ञानेश्वर पाटील</a><ul><li><a href="#">शुभम पाटील</a></li></ul></li>
+                                                                                                                    <li><a href="#">विनोद पाटील</a></li>
+                                                                                                                    <li><a href="#">तुषार पाटील</a></li>
+                                                                                                                </ul>
+                                                                                                            </li>
+                                                                                                        </ul>
+                                                                                                    </li>
+                                                                                                    
+                                                                                                    <li><a href="#">भगवान पाटील</a>
+                                                                                                        <ul>
+                                                                                                            <li><a href="#">रवींद्र पाटील</a></li>
+                                                                                                            <li><a href="#">अरुण पाटील</a>
+                                                                                                                <ul>
+                                                                                                                    <li><a href="#">वैभव पाटील</a></li>
+                                                                                                                    <li><a href="#">प्रशांत पाटील</a></li>
+                                                                                                                </ul>
+                                                                                                            </li>
+                                                                                                        </ul>
+                                                                                                    </li>
+
+                                                                                                    <li><a href="#">नामदेव पाटील</a><ul><li><a href="#">वासुदेव पाटील</a><ul><li><a href="#">धीरज पाटील</a></li></ul></li><li><a href="#">अनिल पाटील</a><ul><li><a href="#">कार्तिक पाटील</a></li><li><a href="#">गणेश पाटील</a></li></ul></li><li><a href="#">शरद पाटील</a><ul><li><a href="#">निलेश पाटील</a><ul><li><a href="#">साहिल पाटील</a></li></ul></li><li><a href="#">अमोल पाटील</a></li></ul></li></ul></li>
+                                                                                                    
+                                                                                                    <li><a href="#">काशीराम पाटील</a></li>
+                                                                                                    
+                                                                                                    <li><a href="#">मारुती पाटील</a><ul><li><a href="#">भावडू पाटील</a><ul><li><a href="#">प्रभाकर पाटील</a><ul><li><a href="#">आशिष पाटील</a></li></ul></li><li><a href="#">देवबा पाटील</a><ul><li><a href="#">लोकेश पाटील</a></li></ul></li></ul></li></ul></li>
+
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </li>
+
+                                                                                    <li>
+                                                                                        <a href="#">शिवराम पाटील</a>
+                                                                                        <ul>
+                                                                                            <li>
+                                                                                                <a href="#">आनंदा पाटील</a>
+                                                                                                <ul>
+                                                                                                    <li><a href="#">ओंकार पाटील</a>
+                                                                                                        <ul>
+                                                                                                            <li><a href="#">शैलेश पाटील</a></li>
+                                                                                                            <li><a href="#">प्रदीप पाटील</a></li>
+                                                                                                        </ul>
+                                                                                                    </li>
+                                                                                                    <li><a href="#">एकनाथ पाटील</a>
+                                                                                                        <ul>
+                                                                                                            <li><a href="#">मनोहर पाटील</a>
+                                                                                                                <ul>
+                                                                                                                    <li><a href="#">प्रमाद पाटील</a></li>
+                                                                                                                    <li><a href="#">राजेंद्र पाटील</a></li>
+                                                                                                                    <li><a href="#">दीपक पाटील</a></li>
+                                                                                                                </ul>
+                                                                                                            </li>
+                                                                                                        </ul>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+
+                                                                            <li>
+                                                                                <a href="#">शाम पाटील</a>
+                                                                            </li>
+
+                                                                            <li>
+                                                                                <a href="#">पुर्ना पाटील</a>
+                                                                                <ul>
+                                                                                    <li><a href="#">सेनू पाटील</a></li>
+                                                                                    
+                                                                                    <li>
+                                                                                        <a href="#">सीताराम पाटील</a>
+                                                                                        <ul>
+                                                                                            <li><a href="#">नीना पाटील</a>
+                                                                                                <ul>
+                                                                                                    <li><a href="#">उत्तम पाटील</a></li>
+                                                                                                    <li><a href="#">प्रल्हाद पाटील</a>
+                                                                                                        <ul>
+                                                                                                            <li><a href="#">निळकंठ पाटील</a>
+                                                                                                                <ul>
+                                                                                                                    <li><a href="#">उमेश पाटील</a></li>
+                                                                                                                    <li><a href="#">गणेश पाटील</a></li>
+                                                                                                                </ul>
+                                                                                                            </li>
+                                                                                                            <li><a href="#">मधुकर पाटील</a>
+                                                                                                                <ul>
+                                                                                                                    <li><a href="#">मयूर पाटील</a></li>
+                                                                                                                    <li><a href="#">अमोल पाटील</a></li>
+                                                                                                                </ul>
+                                                                                                            </li>
+                                                                                                            <li><a href="#">सुधाकर पाटील</a>
+                                                                                                                <ul>
+                                                                                                                    <li><a href="#">आलोक पाटील</a></li>
+                                                                                                                    <li><a href="#">निकेल पाटील</a></li>
+                                                                                                                </ul>
+                                                                                                            </li>
+                                                                                                        </ul>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </li>
+                                                                                    
+                                                                                    <li>
+                                                                                        <a href="#">सोमा पाटील</a>
+                                                                                        <ul>
+                                                                                            <li><a href="#">देविदास पाटील</a>
+                                                                                                <ul>
+                                                                                                    <li><a href="#">सुभाष पाटील</a><ul><li><a href="#">सचिन पाटील</a></li></ul></li>
+                                                                                                    <li><a href="#">प्रकाश पाटील</a><ul><li><a href="#">दिलीप पाटील</a></li><li><a href="#">संदीप पाटील</a></li></ul></li>
+                                                                                                    <li><a href="#">राजू पाटील</a></li>
+                                                                                                    <li><a href="#">अशोक पाटील</a></li>
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            
+                                                            <li>
+                                                                <a href="#">गनाजी पाटील</a>
+                                                                <ul>
+                                                                     <li><a href="#">हरी पाटील</a></li>
+                                                                    <li><a href="#">हिराजी पाटील</a></li>
+                                                                </ul>
+                                                            </li>
+
+                                                        </ul>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#">गंगाराम पाटील</a>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="#">देविदास पाटील</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
